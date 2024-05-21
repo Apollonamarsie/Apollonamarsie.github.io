@@ -3,7 +3,7 @@ import "./Info.css";
 const Info = () => {
   return (
     <div className="cardcontainer">
-      <div className="card">
+      <div className="cardinfo">
         <div className="align">
           <span className="red"></span>
           <span className="yellow"></span>

@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.card {
+.cardinfo {
   width: 300px;
   height: 180px;
   padding: 0.5rem;
@@ -23,7 +23,7 @@
   color: rgb(0, 0, 0);
 }
 
-.card:hover {
+.cardinfo:hover {
   height: 350px;
   transform: skew(0deg);
 }
@@ -60,7 +60,7 @@
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
 }
 
-.card h1 {
+.cardinfo h1 {
   text-align: center;
   margin: 1.3rem;
   color: rgb(30, 46, 128);
