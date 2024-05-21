@@ -1,34 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import NavBar from './components/NavBar'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Statistics from './components/Statistics';
+import Colonisation from './components/Colonisation';
+import Converter from './components/Converter';
+import Planets from './components/Planets';
+import Moons from './components/Moons';
+import Gallery from './components/Gallery';
+import Simulation from './components/Simulation';
+import Form from './components/Form';
+import Info from './components/Info';
+import MainPage from './components/MainPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main>
+      <Router>
+        <NavBar />
+        <div>
+          <Switch>
+            <Route path="/statystyki">
+              <Statistics />
+            </Route>
+            <Route path="/kolonizacja">
+              <Colonisation />
+            </Route>
+            <Route path="/konwerter">
+              <Converter />
+            </Route>
+            <Route path="/planety">
+              <Planets />
+            </Route>
+            <Route path="/ksiezyce">
+              <Moons />
+            </Route>
+            <Route path="/galeria">
+              <Gallery />
+            </Route>
+            <Route path="/symulacja">
+              <Simulation />
+            </Route>
+            <Route path="/formularz">
+              <Form />
+            </Route>
+            <Route path="/info">
+              <Info />
+            </Route>
+            <Route path="/">
+              <MainPage />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </main>
   )
 }
 
