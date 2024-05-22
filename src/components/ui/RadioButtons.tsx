@@ -9,7 +9,7 @@ const RadioButtons = ({onChange} : RadioButtonsProps) => {
 
   const [option, setOption] = useState(1);
 
-  const handleClick = (value) => {
+  const handleClick = (value: any) => {
     setOption(value);
     if (value === 1) {
       onChange('kobieta')

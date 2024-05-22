@@ -13,7 +13,7 @@ const Form = () => {
   const [cosmos, setCosmos] = useState<boolean>(false);
   const [willingness, setWillingness] = useState<number>(5);
 
-  const submit = (e) => {
+  const submit = (e: any) => {
     e.preventDefault();
     const text1 = "Gdybyśmy mieli serwer mailowy to teraz by został wysłany tutaj email z danymi takimi jak twoje imię: "
     + name + " i wiek: " + age + ". Twoja płeć to " + sex;
