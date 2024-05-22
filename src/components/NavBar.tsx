@@ -18,7 +18,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link style={{background: "#666"}} id="/" onClick={navigate}>Strona główna</Nav.Link>
+            <Nav.Link id="/" onClick={navigate}>Strona główna</Nav.Link>
             <Nav.Link style={{background: "#666"}} id="/statystyki" onClick={navigate}>Statystyki</Nav.Link>
             <Nav.Link id="/kolonizacja" onClick={navigate}>Kolonizacja marsa</Nav.Link>
             <Nav.Link style={{background: "#666"}} id="/konwerter" onClick={navigate}>Konwerter</Nav.Link>
