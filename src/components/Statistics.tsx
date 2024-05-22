@@ -1,7 +1,12 @@
 
 const Statistics = () => {
   return (
-    <div>Statistics</div>
+    <div>
+      <div>Data</div>
+      <div>Czas</div>
+      <div>Odwiedziny</div>
+      <div>Czas spędzony na stronie</div>
+    </div>
   )
 }
 
