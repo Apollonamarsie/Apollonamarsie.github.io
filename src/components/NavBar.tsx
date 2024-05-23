@@ -19,7 +19,7 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link id="/" onClick={navigate}>Strona główna</Nav.Link>
-            <Nav.Link style={{background: "#666"}} id="/statystyki" onClick={navigate}>Statystyki</Nav.Link>
+            <Nav.Link id="/statystyki" onClick={navigate}>Statystyki</Nav.Link>
             <Nav.Link id="/kolonizacja" onClick={navigate}>Kolonizacja marsa</Nav.Link>
             <Nav.Link style={{background: "#666"}} id="/konwerter" onClick={navigate}>Konwerter</Nav.Link>
             <Nav.Link style={{background: "#666"}} id="/planety" onClick={navigate}>Planety</Nav.Link>

@@ -16,8 +16,52 @@ import Simulation from './components/Simulation';
 import Form from './components/Form';
 import Info from './components/Info';
 import MainPage from './components/MainPage';
+import { useEffect, useState } from 'react';
+
+const LOCAL_STORAGE_VISITS = 'visits-psa'
 
 function App() {
+
+  const [visits, setVisits] = useState<number>(0);
+  const [startTime, setStartTime] = useState<Date>(new Date());
+  const [spendTime, setSpendTime] = useState<number>(0);
+
+  const formatSpendTime = () => {
+    const endDate = new Date();
+    //@ts-ignore
+    const diffInMs = Math.abs(endDate - startTime);
+    const diffInSeconds = Math.floor(diffInMs / 1000);
+    const hours = Math.floor(diffInSeconds / 3600).toString().padStart(2, '0');
+    const minutes = Math.floor((diffInSeconds % 3600) / 60).toString().padStart(2, '0');
+    const seconds = (diffInSeconds % 60).toString().padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
+  }
+
+  useEffect(() => {
+    setStartTime(new Date());
+    const intervalId = setInterval(() => {
+      //@ts-ignore
+      setSpendTime(formatSpendTime());
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const saveToLocalStorage = (key: string, value: number) => {
+    localStorage.setItem(key, JSON.stringify(value));
+  }
+
+  const readFromLocalStorage = (key: string) => {
+    const value = localStorage.getItem(key);
+    return value ? JSON.parse(value) : null;
+  }
+
+  useEffect(() => {
+    const oldVisits = Number(readFromLocalStorage(LOCAL_STORAGE_VISITS));
+    const newVisits = oldVisits + 1;
+    saveToLocalStorage(LOCAL_STORAGE_VISITS, newVisits);
+    setVisits(newVisits);
+  }, []);
+
   return (
     <main>
       <Router>
@@ -25,7 +69,10 @@ function App() {
         <div>
           <Switch>
             <Route path="/statystyki">
-              <Statistics />
+              <Statistics 
+                visits={visits}
+                spendTime={spendTime}
+              />
             </Route>
             <Route path="/kolonizacja">
               <Colonisation />
