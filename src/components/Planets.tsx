@@ -1,7 +1,7 @@
 
 const Planets = () => {
   return (
-    <div>Planets</div>
+    <div>Planety tu będą i prezentacja ich</div>
   )
 }
 
