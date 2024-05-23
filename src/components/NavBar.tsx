@@ -23,7 +23,7 @@ function NavBar() {
             <Nav.Link id="/kolonizacja" onClick={navigate}>Kolonizacja marsa</Nav.Link>
             <Nav.Link style={{background: "#666"}} id="/konwerter" onClick={navigate}>Konwerter</Nav.Link>
             <Nav.Link style={{background: "#666"}} id="/planety" onClick={navigate}>Planety</Nav.Link>
-            <Nav.Link style={{background: "#666"}} id="/ksiezyce" onClick={navigate}>Księżyce</Nav.Link>
+            <Nav.Link id="/ksiezyce" onClick={navigate}>Księżyce</Nav.Link>
             <Nav.Link style={{background: "#666"}} id="/galeria" onClick={navigate}>Kosmiczna galeria</Nav.Link>
             <Nav.Link id="/symulacja" onClick={navigate}>Symulacja</Nav.Link>
             <Nav.Link id="/formularz" onClick={navigate}>Dołącz do nas</Nav.Link>
