@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10vmin;
+  line-height: 10vmin;
+  font-weight: 900;
+}
+
+.gradient-text {
+  color: transparent;
+  background: conic-gradient(#574ae9 12%,
+      #370f8f 12%, #6d2ef4 33%,
+      #40531a 33%, #81c200 55%,
+      #ff5151 55%, #970000 70%,
+      #439ce4 70%, #27323a 87%,
+      #b34806 87%);
+  background-size: 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: expand-rev 0.5s ease forwards;
+  cursor: cell;
+}
+
+.gradient-text:hover {
+  animation: expand 0.5s ease forwards;
+}
+
+@keyframes expand {
+  0% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+
+  100% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+}
+
+@keyframes expand-rev {
+  0% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+
+  100% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+}
+
+.oneplanet-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oneplanet-title {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: 900;
+}
+
+.oneplanet-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 720px) {
+  .oneplanet-main {
+    border: 2px solid black;
+    padding: 2rem;
+    width: 50%;
+    height: 50vh;
+  }
+  .oneplanet-content {
+    flex-direction: row;
+  }
+}
+
+.oneplanet-description {
+  display: flex;
+  align-items: center;
+  padding: 5%;
+  font-size: 1.5rem;
+}
+
+.oneplanet-image {}

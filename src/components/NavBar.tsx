@@ -22,7 +22,7 @@ function NavBar() {
             <Nav.Link id="/statystyki" onClick={navigate}>Statystyki</Nav.Link>
             <Nav.Link id="/kolonizacja" onClick={navigate}>Kolonizacja marsa</Nav.Link>
             <Nav.Link id="/konwerter" onClick={navigate}>Konwerter</Nav.Link>
-            <Nav.Link style={{background: "#666"}} id="/planety" onClick={navigate}>Planety</Nav.Link>
+            <Nav.Link id="/planety" onClick={navigate}>Planety</Nav.Link>
             <Nav.Link id="/ksiezyce" onClick={navigate}>Księżyce</Nav.Link>
             <Nav.Link id="/galeria" onClick={navigate}>Kosmiczna galeria</Nav.Link>
             <Nav.Link id="/symulacja" onClick={navigate}>Symulacja</Nav.Link>

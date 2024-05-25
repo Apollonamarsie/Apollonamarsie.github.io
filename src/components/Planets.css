@@ -1,0 +1,16 @@
+.planets {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.planets-button {
+
+}
+
+@media screen and (max-width: 480px) {
+  .planets-button {
+    display: none;
+  }
+}
