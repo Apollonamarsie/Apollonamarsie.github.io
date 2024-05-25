@@ -17,6 +17,8 @@ import Form from './components/Form';
 import Info from './components/Info';
 import MainPage from './components/MainPage';
 import { useEffect, useState } from 'react';
+import { PrimeReactProvider } from 'primereact/api';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 const LOCAL_STORAGE_VISITS = 'visits-psa'
 
@@ -63,48 +65,50 @@ function App() {
   }, []);
 
   return (
-    <main>
-      <Router>
-        <NavBar />
-        <div>
-          <Switch>
-            <Route path="/statystyki">
-              <Statistics 
-                visits={visits}
-                spendTime={spendTime}
-              />
-            </Route>
-            <Route path="/kolonizacja">
-              <Colonisation />
-            </Route>
-            <Route path="/konwerter">
-              <Converter />
-            </Route>
-            <Route path="/planety">
-              <Planets />
-            </Route>
-            <Route path="/ksiezyce">
-              <Moons />
-            </Route>
-            <Route path="/galeria">
-              <Gallery />
-            </Route>
-            <Route path="/symulacja">
-              <Simulation />
-            </Route>
-            <Route path="/formularz">
-              <Form />
-            </Route>
-            <Route path="/info">
-              <Info />
-            </Route>
-            <Route path="/">
-              <MainPage />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    </main>
+    <PrimeReactProvider>
+      <main>
+        <Router>
+          <NavBar />
+          <div>
+            <Switch>
+              <Route path="/statystyki">
+                <Statistics
+                  visits={visits}
+                  spendTime={spendTime}
+                />
+              </Route>
+              <Route path="/kolonizacja">
+                <Colonisation />
+              </Route>
+              <Route path="/konwerter">
+                <Converter />
+              </Route>
+              <Route path="/planety">
+                <Planets />
+              </Route>
+              <Route path="/ksiezyce">
+                <Moons />
+              </Route>
+              <Route path="/galeria">
+                <Gallery />
+              </Route>
+              <Route path="/symulacja">
+                <Simulation />
+              </Route>
+              <Route path="/formularz">
+                <Form />
+              </Route>
+              <Route path="/info">
+                <Info />
+              </Route>
+              <Route path="/">
+                <MainPage />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </main>
+    </PrimeReactProvider>
   )
 }
 
