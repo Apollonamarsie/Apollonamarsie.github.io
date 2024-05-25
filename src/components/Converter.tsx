@@ -50,7 +50,7 @@ const Converter = () => {
   return (
     <div className='converter-wrapper1'>
       <FloatLabel>
-        <InputNumber locale='pl-PL' value={t} onValueChange={(e) => setT(e.value)} />
+        <InputNumber locale='pl-PL' value={t} onValueChange={(e: any) => setT(e.value)} />
         <label htmlFor="number-input">Czas [s]</label>
       </FloatLabel>
       <div className='converter-wrapper2'>
@@ -64,11 +64,11 @@ const Converter = () => {
             onChange={(e) => setIsStraight1(e.value)}
           />
           <FloatLabel>
-            <InputNumber variant={!isStraight1 ? 'filled' : 'outlined'} locale='pl-PL' disabled={!isStraight1} value={v1} onValueChange={(e) => setV1(e.value)} />
+            <InputNumber variant={!isStraight1 ? 'filled' : 'outlined'} locale='pl-PL' disabled={!isStraight1} value={v1} onValueChange={(e: any) => setV1(e.value)} />
             <label htmlFor="number-input">Prędkość statku 1 [m/s]</label>
           </FloatLabel>
           <FloatLabel>
-            <InputNumber variant={isStraight1 ? 'filled' : 'outlined'} locale='pl-PL' disabled={isStraight1} value={a1} onValueChange={(e) => setA1(e.value)} />
+            <InputNumber variant={isStraight1 ? 'filled' : 'outlined'} locale='pl-PL' disabled={isStraight1} value={a1} onValueChange={(e: any) => setA1(e.value)} />
             <label htmlFor="number-input">Przyśpieszenie statku 1 [m/s^2]</label>
           </FloatLabel>
           <Fieldset legend={`Statek 1 przeleciał: ${s1}m`} />
@@ -82,11 +82,11 @@ const Converter = () => {
             onChange={(e) => setIsStraight2(e.value)}
           />
           <FloatLabel>
-            <InputNumber variant={!isStraight2 ? 'filled' : 'outlined'} locale='pl-PL' disabled={!isStraight2} value={v2} onValueChange={(e) => setV2(e.value)} />
+            <InputNumber variant={!isStraight2 ? 'filled' : 'outlined'} locale='pl-PL' disabled={!isStraight2} value={v2} onValueChange={(e: any) => setV2(e.value)} />
             <label htmlFor="number-input">Prędkość statku 1 [m/s]</label>
           </FloatLabel>
           <FloatLabel>
-            <InputNumber variant={isStraight2 ? 'filled' : 'outlined'} locale='pl-PL' disabled={isStraight2} value={a2} onValueChange={(e) => setA2(e.value)} />
+            <InputNumber variant={isStraight2 ? 'filled' : 'outlined'} locale='pl-PL' disabled={isStraight2} value={a2} onValueChange={(e: any) => setA2(e.value)} />
             <label htmlFor="number-input">Przyśpieszenie statku 1 [m/s^2]</label>
           </FloatLabel>
           <Fieldset legend={`Statek 2 przeleciał: ${s2}m`} />

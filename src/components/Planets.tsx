@@ -85,11 +85,11 @@ const Planets = () => {
     })
   }
 
-  const handleTouchStart = (event) => {
+  const handleTouchStart = (event: any) => {
     touchStartX.current = event.touches[0].clientX;
   };
 
-  const handleTouchMove = (event) => {
+  const handleTouchMove = (event: any) => {
     if (!touchStartX.current) {
       return;
     }
