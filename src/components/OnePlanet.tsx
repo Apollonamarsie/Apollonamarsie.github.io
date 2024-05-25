@@ -11,7 +11,7 @@ const OnePlanet = ({ name, desc, img }: OnePlanetProps) => {
   return (
     <div className='oneplanet-main'>
       <div className='oneplanet-title'>
-        <h1 className="gradient-text">
+        <h1 className="gradient-text oneplanet-h1">
           {name}
         </h1>
       </div>
