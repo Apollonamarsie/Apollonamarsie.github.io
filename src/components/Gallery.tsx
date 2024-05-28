@@ -22,13 +22,17 @@ const pictures = [
 ]
 
 const Gallery = () => {
-  return pictures.map((name) => (
-    <Image
-      width={200}
-      src={name}
-      id={name}
-    />
-  ));
+  return (
+    <Image.PreviewGroup>
+      {pictures.map((name) => (
+        <Image
+          width={200}
+          src={name}
+          id={name}
+        />
+      ))}
+    </Image.PreviewGroup>
+  )
 }
 
 export default Gallery
